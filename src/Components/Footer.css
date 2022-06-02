@@ -1,0 +1,28 @@
+.footer{
+    background-color:black;
+    color: white;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px;
+
+  }
+  
+  .total{
+    margin:auto;
+  }
+  .reset{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(247, 25, 92);
+    color: aliceblue;
+    font-family: sans-serif;
+  }
+  
+  .pay{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(25, 95, 247);
+    color: aliceblue;
+    font-family: sans-serif;
+  }
