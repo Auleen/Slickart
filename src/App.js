@@ -36,19 +36,20 @@ export default function App() {
   ];
   console.log(ProdList);
   const [prodLst, setProductList] = useState(ProdList);
+
+  //function to increment the cart items
   const incrementQ = (index) => {
-    // alert("Parent Reached");
     let newprdlist = [...prodLst];
     newprdlist[index].quantity++;
-    // alert(`New Quantity of ${index} is ${newprdlist[index].quantity++}`);
     setProductList(newprdlist);
     let newTotal = total + prodLst[index].price;
     setTotal(newTotal);
     let newItems = totalItems++;
     setItems(newItems);
   };
+
+  //function to decrement the cart items
   const decrementQ = (index) => {
-    // alert("Parent Reached");
     let newprdlist = [...prodLst];
     if (newprdlist[index].quantity > 0) {
       newprdlist[index].quantity--;
@@ -58,13 +59,16 @@ export default function App() {
     } else {
       alert("Invalid Operation");
     }
-    // alert(`New Quantity of ${index} is ${newprdlist[index].quantity++}`);
   };
 
+  // reset the shopping cart
   const reset = () => {
-    setProductList(ProductList);
+    let newList = [...prodLst];
+    newList.map((item) => {
+      item.quantity = 0;
+    });
+    setProductList(newList);
     setTotal(0);
-    alert("Cart Reset");
   };
 
   const [total, setTotal] = useState(0);
