@@ -1,8 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import ProductList from "./Components/ProductList";
 import Footer from "./Components/Footer.js";
+import Checkout from "./Components/Checkout";
 import React, { useState } from "react";
 import buzz from "./images/buzz.jpg";
 import slash from "./images/slash.jpg";
@@ -75,17 +76,36 @@ export default function App() {
   const [totalItems, setItems] = useState(0);
   return (
     <>
-      <Navbar />
-      <main className="container mt-5">
-        {" "}
-        <ProductList
-          list={prodLst}
-          incrementQ={incrementQ}
-          decrementQ={decrementQ}
-        />
-      </main>
-
-      <Footer total={total} totalItems={totalItems} reset={reset} />
+      <Router>
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <>
+                <Navbar />
+                <main className="container mt-5">
+                  {" "}
+                  <ProductList
+                    list={prodLst}
+                    incrementQ={incrementQ}
+                    decrementQ={decrementQ}
+                  />
+                </main>
+                <Footer total={total} totalItems={totalItems} reset={reset} />
+              </>
+            }
+          />
+          <Route
+            path="/Checkout"
+            element={
+              <>
+                <Checkout />
+              </>
+            }
+          />
+        </Routes>
+      </Router>
     </>
   );
 }
