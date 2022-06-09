@@ -1,5 +1,11 @@
 import "./App.css";
-import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import {
+  Route,
+  Routes,
+  BrowserRouter as Router,
+  useNavigate,
+  useLocation,
+} from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import ProductList from "./Components/ProductList";
 import Footer from "./Components/Footer.js";
@@ -100,7 +106,8 @@ export default function App() {
             path="/Checkout"
             element={
               <>
-                <Checkout />
+                <Navbar />
+                <Checkout total={total} />
               </>
             }
           />
