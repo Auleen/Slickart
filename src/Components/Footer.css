@@ -17,6 +17,13 @@
     background-color: rgb(247, 25, 92);
     color: aliceblue;
     font-family: sans-serif;
+    transition: delay 0.5em;
+    transition-duration: 0.3s;
+  }
+
+  .reset:hover{
+    color:rgb(247, 25, 92);
+    background-color: aliceblue;
   }
   
   .pay{
@@ -25,4 +32,13 @@
     background-color: rgb(25, 95, 247);
     color: aliceblue;
     font-family: sans-serif;
+    text-decoration: none;
+    transition: delay 0.5em;
+    transition-duration: 0.3s;
+  }
+
+  .pay:hover{
+    background-color: aliceblue;
+    color: blue;
+    /* transition-delay: 2s; */
   }
