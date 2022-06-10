@@ -94,7 +94,7 @@ function Checkout(props) {
             <div className="paybutton">
               <GooglePayButton
                 environment="TEST"
-                buttonColor="white"
+                buttonColor="default"
                 paymentRequest={{
                   apiVersion: 2,
                   apiVersionMinor: 0,
