@@ -9,7 +9,7 @@ A dummy E-commerce website made using ReactJS for buying iconic and memorable it
 Clone the project
 
 ```bash
-  git clone https://[link-to-project](https://github.com/Auleen/Slickart.git)
+  git clone https://https://github.com/Auleen/Slickart.git
 ```
 
 Go to the project directory
