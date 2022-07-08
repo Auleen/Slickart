@@ -8,7 +8,7 @@ class Navbar extends Component {
         <div className="container-fluid">
           <a className="navbar-brand">
             <Link style={{ textDecoration: "none", color: "aliceblue" }} to="/">
-              Slickart
+              RecycleKart
             </Link>
           </a>
         </div>

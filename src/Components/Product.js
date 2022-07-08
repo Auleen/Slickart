@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import buzz from "../images/buzz.jpg";
 import slash from "../images/slash.jpg";
 import nirvana from "../images/nirvana.jfif";
+import bottle from "../images/Klean-Kanteen-Recycled-Gear.jpg";
+import blanket from "../images/Gear-Seljak-Earth-blanket-1-SOURCE-Seljak.jpg";
 export default function Product(props) {
   console.log(props);
-  const imageArr = [{ slash }, { buzz }, { nirvana }];
+  const imageArr = [{ slash }, { buzz }, { nirvana }, { blanket }, { bottle }];
   console.log(typeof imageArr[0]);
   return (
     <>

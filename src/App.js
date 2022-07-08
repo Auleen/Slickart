@@ -17,12 +17,12 @@ import slash from "./images/slash.jpg";
 export default function App() {
   const ProdList = [
     {
-      name: "Slash Hat",
+      name: "Paper Leather Hat",
       price: 999,
       quantity: 0,
       image: { slash },
       describe:
-        "The iconic hat of probably the greatest guitarist of all time wrapped with his favourite belt that adds on to its slick look",
+        "The iconic hat inspired from probably the greatest guitarist of all time made completely out of recycled paper collected from door to door trash.",
     },
     {
       name: "Buzz Lightyear Gun",
@@ -30,7 +30,7 @@ export default function App() {
       quantity: 0,
       image: { buzz },
       describe:
-        "Get on the journey to infinity and beyond and shoot off invaders with the limited edition Buzz Lightyear Beep Beep Gun",
+        "A recyled plastic toy made from used plastic bags and bottles and crafted into an attractive kids' toy",
     },
     {
       name: "Nirvana Unisex Oversized T-Shirt - Black",
@@ -38,7 +38,25 @@ export default function App() {
       quantity: 0,
       image: { slash },
       describe:
-        "The classic Nirvana shirt which Kurt Cobain himself did not know off. For all the Nirvana fans who can't name even 5 songs by the band",
+        "The classic Nirvana shirt which made out of waste cloths and fabrics that had been disposed off earlier.",
+    },
+
+    {
+      name: "Recycled Earth Blanket",
+      price: 699,
+      quantity: 0,
+      image: { slash },
+      describe:
+        "The Australian company Seljak makes beautiful blankets out of 100 percent recycled materials—mainly wool and polyester, but the company says 15 percent is other recycled fibers. Even better, each blanket is made from production scraps, so there's little waste. This is a pricey blanket, but it's one you can feel good about (while keeping warm).",
+    },
+
+    {
+      name: "A Better Water Bottle",
+      price: 699,
+      quantity: 0,
+      image: { slash },
+      describe:
+        "Swapping out single-use plastic for a reusable water bottle is a big step on its own to reduce waste. Whichever bottle you like to drink out of is the one you should go with. But Klean Kanteen also now makes some of its options from 90 percent recycled stainless steel. Even better? You can put them in the dishwasher.",
     },
   ];
   console.log(ProdList);
