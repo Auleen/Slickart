@@ -1,22 +1,22 @@
-import React, { Component } from "react";
-import buzz from "../images/buzz.jpg";
-import slash from "../images/slash.jpg";
-import nirvana from "../images/nirvana.jfif";
-import bottle from "../images/Klean-Kanteen-Recycled-Gear.jpg";
-import blanket from "../images/Gear-Seljak-Earth-blanket-1-SOURCE-Seljak.jpg";
+import React from "react";
+import { useState } from "react";
 export default function Product(props) {
   console.log(props);
-  const imageArr = [{ slash }, { buzz }, { nirvana }, { blanket }, { bottle }];
-  console.log(typeof imageArr[0]);
+  const [qnt, setQnt] = useState(props.x.quantity);
+  const increment = () => {
+    setQnt(qnt + 1);
+    props.setBill(props.x.price);
+  };
   return (
     <>
       <div className="card mb-3">
         <div className="row g-0">
           <div className="col-md-4">
             <img
-              src={Object.values(imageArr[props.index])}
+              src={props.x.URL}
               className="img-fluid rounded-start"
               alt={props.x.name}
+              style={{ width: "100%", height: "auto" }}
             />
           </div>
           <div className="col-md-8">
@@ -24,33 +24,27 @@ export default function Product(props) {
               <pre>
                 <h5 className="card-title">
                   {props.x.name}{" "}
-                  <span className="badge bg-secondary">${props.x.price}</span>
+                  <span className="badge bg-secondary">₹{props.x.price}</span>
                 </h5>
               </pre>
 
-              <p className="card-text">{props.x.describe}</p>
+              <p className="card-text">{props.x.description}</p>
               <div
                 className="btn-group"
                 role="group"
                 aria-label="Basic mixed styles example"
               >
-                <button
-                  type="button"
-                  className="btn btn-danger"
-                  onClick={() => {
-                    props.decrementQ(props.index);
-                  }}
-                >
+                <button type="button" className="btn btn-danger">
                   -
                 </button>
                 <button type="button" className="btn btn-warning">
-                  {props.x.quantity}
+                  {qnt}
                 </button>
                 <button
                   type="button"
                   className="btn btn-success"
                   onClick={() => {
-                    props.incrementQ(props.index);
+                    increment();
                   }}
                 >
                   +
@@ -58,7 +52,7 @@ export default function Product(props) {
               </div>
               <div className="col-6">
                 <strong>Total:</strong>
-                {props.x.quantity * props.x.price}
+                {qnt * props.x.price}
               </div>
             </div>
           </div>
